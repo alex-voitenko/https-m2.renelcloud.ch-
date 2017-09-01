@@ -1,0 +1,135 @@
+@CHARSET "ISO-8859-1";
+.dataTables_length{
+	margin-left:0 !important;
+}
+.datatables-top{
+	padding-left:0!important;
+	padding-right:0 !important;
+}
+.dataTables_filter{
+	margin-right:0px !important;
+}
+.dataTables_info{
+	margin-left:0 !important;
+}
+.datatables-bottom{
+	padding-left:0!important;
+	padding-right:0 !important;
+}
+.dataTables_paginate{
+	margin-right:0 !important;
+}
+
+.table thead th{
+	padding: 8px !important;
+	line-height: 1.42857 !important;
+	font-weight:bold !important;
+	border-bottom-width: 2px !important;
+	border: 1px solid #dddddd !important;
+	font-size: 14px !important;
+	background-color:white !important;
+}
+.table tbody tr td{
+	padding: 8px !important;
+	line-height: 1.42857 !important;
+	border-bottom-width: 2px !important;
+	border: 1px solid #dddddd !important;
+	font-size: 14px !important;
+}
+
+.ui-resizable {
+    position: relative;
+}
+.ui-dialog {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .2em;
+    outline: 0;
+}
+.ui-front {
+    z-index: 100;
+}
+.ui-dialog {
+    position: absolute;
+    top: 0;
+    width: 95% !important;
+    margin:0 auto;
+    padding: .2em;
+    outline: 0;
+    border: 1px solid #aaaaaa;
+	background: #ffffff url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+	color: #222222;
+	
+}
+.ui-resizable {
+    position: relative;
+}
+.ui-front {
+    z-index: 100;
+}
+.ui-state-default .ui-icon {
+    background-image: url("images/ui-icons_888888_256x240.png");
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+}
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+    
+}
+@media (max-width:800px){
+table tr td:first-child {
+  padding-left:28px !important;
+}
+}
+.dataTables_filter label{
+
+	height:30px !important;
+}
+.dataTables_filter label input{
+	height:30px !important;
+}
+.dataTables_length label{
+	height:30px !important;
+}
+.dataTables_length label select{
+	height:30px !important;
+	padding: 0 !important;
+}
+.ui-draggable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-helper-clearfix {
+    min-height: 0;
+}
+.ui-helper-clearfix {
+    min-height: 0;
+}
+
+
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+}
+.icon-a{
+	width:18px !important;
+	height:18px !important;
+	display:block !important;
+	padding:2px;
+}
+

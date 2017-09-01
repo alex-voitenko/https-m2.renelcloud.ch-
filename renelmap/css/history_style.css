@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Filename: history_style.css
+    Created on : 10 juin 2016, 17:29:21
+    Author     : HellCat
+*/
+
+/*----------------------------------------------
+CSS settings for PanelHistory
+------------------------------------------------*/
+.panelHistory {
+	width:auto;
+	float:left;
+	height:auto;
+	background: #fff;
+	position:relative;
+	left:-500px;
+	opacity: 0.85;
+        z-index: 15;
+}
+
+.formHistory {
+    max-width:300px;
+    min-width:250px;
+    padding:10px 50px;
+    font-family:'Helvetica',sans-serif;
+    background-color: transparent;
+}
+p.history {
+    margin-top:30px
+}
+h2.history {
+    background-color:transparent;
+    color: #747272;
+    padding:20px 35px;
+    margin:-10px -50px;
+    text-align:center;
+}
+hr.history {
+    margin:10px -50px;
+    border:0;
+    border-top:1px solid #747272;
+}
+selecthistory {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #747272;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: 'Helvetica',sans-serif;
+    background-color: transparent;
+    color: #747272;    
+}
+input.history[type=text] {
+    width:90%;
+    padding:10px;
+    margin-top:30px;
+    border:1px solid #747272;
+    padding-left:10px;
+    font-size:16px;
+    font-family:'Helvetica',sans-serif;
+    background-color: transparent;
+    color: #747272;
+}
+input.history[type=checkbox] {
+    margin-top:30px;
+    border:1px solid #747272;
+    font-size:16px;
+    font-family:'Helvetica',sans-serif;
+    background-color: #808080;
+    color: #000;
+}
+
+.chkbox_label {
+    display: inline-block; 
+    color: #747272;
+    font-size: 16px;
+    font-family: 'Helvetica',sans-serif;
+    font-weight: bold; 
+    /*margin-left: 65px;*/
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+submit.history {
+    text-decoration:none;
+    width:100%;
+    text-align:center;
+    display:block;
+    background-color: #ea5a23;
+    color:#fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding:10px 0;
+    font-size:20px;
+    cursor:pointer;
+}
+
+button.history {
+    width:10%;
+    height:45px;
+    border-radius:3px;
+    background-color:#cd853f;
+    color:#000;
+    font-family:'Helvetica',sans-serif;
+    font-size:18px;
+    cursor:pointer
+}
+input.history[type=button] {
+    width: 90%; 
+    height: 5vh; 
+    font-size: 16px; 
+    font-weight: bold; 
+    background-color: transparent;
+    color:#ea5a23; 
+    margin: 5px;
+    border:1px solid #747272;
+    border-radius: 5px;
+}
+
+option.history {
+    background-color: #fff;
+}
+
+div.history {
+    margin-bottom: 25px;
+    margin-right: -35px;
+}
+
+img.history {
+    width: 5%;
+    height: 5%;
+    float: right;
+}

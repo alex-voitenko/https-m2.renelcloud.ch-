@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Filename: gmapcontrol_style.css
+    Created on : 30 juin 2016, 17:49:54
+    Author     : HellCat
+*/
+
+.ControlDIV {
+    top:0 !important;
+    left:50% !important;
+}
+
+.googleLabels{
+width: auto; 
+padding: 2px;
+
+  border: 1px solid #eb3a44;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #666;
+}
+
+.ControlUI  {
+    background: #ea5a23;
+    border: 2px solid #ea5a23;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    cursor: pointer;
+    text-align: center;
+}
+
+.ControlTXT {
+    color: rgb(255,255,255);
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

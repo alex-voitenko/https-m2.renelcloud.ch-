@@ -1,0 +1,125 @@
+/**
+ * @ysabelcousino@free.fr
+ * @update 2016 november
+ *
+ */
+
+ .identity p, .identity h3{
+ 	text-align: center !important;
+ }
+ .container_act{
+ 	margin:0.5em;
+ 	padding:1em!important;
+ }
+ .activite {
+	display:none ;
+	float:left;
+ }
+#display_site,#display_coord,#display_contact{
+	display:none;
+ }
+.bonjour {
+ 	float:left;
+ 	margin: 3em 0 1em 0 !important;
+ }
+ #displayAddress{
+	display:none;
+ }
+ #pwd1,#pwd2{ 
+ 	display:none;
+ }
+ .avatar{
+ 	width: 150px;
+ 	margin: 0 auto 1em;
+ 	border: 1px solid silver;
+ }
+ .tool{
+ 	width: 80px;
+ 	margin: 0 auto 1em;
+ 	border: 1px solid silver;
+ }
+ #responsable{
+ 	display:none;
+ }
+ .box .box-header.red-background .title {
+    float:none;
+}
+.box .box-header .actions {
+   margin-top: 5px !important;
+}
+.title p{
+	color:white;
+	font-size:1em;
+	    margin: 5px 0;
+    float: left;
+}
+
+#afficheMessage {
+	padding:1em;
+	display: none;
+background:#efcec2;
+margin-bottom:0.5em;
+}
+#afficheMessage p {
+	margin:0;
+	font-size:1.1em;
+}
+ #society{
+ 	width: 275px !important;
+ }
+
+
+ #accueilManager .team-member .member-thumb img {
+ 	padding: 1em;
+    min-width: 150px;
+}
+
+ #accueilManager  .team-member {
+ 	min-width: 200px;
+    width: 25%;
+    position: inherit;
+    float: left;
+    padding: 1em;
+}
+
+.style_one{
+	visibility: hidden;
+	clear:both;
+}
+.style_two{
+	visibility: hidden;
+	clear:both;
+	margin:0;
+	border: 0;
+
+}
+.style_three{
+	visibility: hidden;
+	clear:both;
+	margin:5px 0;
+
+}
+@media (min-width:800px){
+#content .container,
+.contrast-red  .container{
+	width: 90%!important;
+	padding: 2em !important;
+}
+}
+@media (max-width:800px){
+#content .container,
+.contrast-red  .container{
+	width: 100%!important;
+	padding: 5px !important;
+}
+}
+table.table {
+    margin: 0 auto!important;
+}
+@media (max-width: 992px){
+	#accueilManager  .team-member {
+	    width: 50%;
+	     padding: 2em;
+	}
+	
+}

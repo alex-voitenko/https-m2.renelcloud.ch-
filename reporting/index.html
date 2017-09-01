@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="fancygrid/fancy.min.css" rel="stylesheet">
+		<script src="fancygrid/fancy.full.min.js"></script>
+		<script src="jquery/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<select id="wo">
+			<option selected disabled>Choisir</option>
+		</select>
+		<button id="e" type="button">Export CSV</button>
+		<button id="pdf" type="button">Export PDF</button>
+		<a id="flink" href="" style="font-weight:bold">Fichier CSV</a>
+		<a id="plink" href="" style="font-weight:bold">Fichier PDF</a>
+		<div id="tableau" style="padding-top:20px"></div>
+		<script>
+			
+			var grid;
+			
+			function fillSelect() {
+				
+				// Get data to fill the select tag
+				$.ajax({
+						
+					url : 'php/loadWorkOrders.php',
+					type : 'GET',
+					dataType : 'json',
+						
+					success : function(data){
+						
+						console.log('workorders loaded 2 !');
+					
+						var orders = data.workorders;
+						
+						$.each(orders, function(key, value) {
+						
+							var id = value.workorderId;
+							var name = value.workorderName;
+							
+							$('#wo').append($('<option>', {
+								value: id,
+								text: name
+							}));
+						});
+					}
+				});	
+			}
+			
+			$(document).ready(function() {
+				
+				$("#flink").hide();
+				$("#plink").hide();
+				$("#e").hide();
+				$("#pdf").hide();
+				
+				// Call the method to fill the select
+				fillSelect();
+				
+				// Export
+				$('#e').click(function() {
+					
+					if (grid) {
+						if (grid.data) {
+							if (grid.data.items) {
+								
+								if (grid.data.items.length > 0) {
+								
+									var dataToExport = grid.data.items;
+									
+									$.ajax({
+										
+									  type: 'POST',
+									  url: 'php/export.php',
+									  data: {export:dataToExport},
+									  success: function(data) {
+										  
+										  $("#flink").attr("href", data);
+										  $("#flink").show();						  
+									  }
+									});
+								}
+							}
+						}
+					}
+				});
+				
+				// Export PDF
+				$('#pdf').click(function() {
+					
+					if (grid) {
+						if (grid.data) {
+							if (grid.data.items) {
+								
+								if (grid.data.items.length > 0) {
+								
+									var dataToExport = grid.data.items;
+									
+									$.ajax({
+										
+									  type: 'POST',
+									  url: 'php/exportPDF.php',
+									  data: {export:dataToExport},
+									  success: function(data) {
+										  
+										  $("#plink").attr("href", data);
+										  $("#plink").show();				  
+									  }
+									});
+								}
+							}
+						}
+					}
+				});				
+				
+				// Select tag change handler function
+				$('#wo').change(function() {
+					
+					$("#flink").hide();
+					$("#plink").hide();
+					
+					var idFromSelect = $('#wo').val();
+					var urlById = 'php/loadReport.php';
+					
+					$.ajax({
+							
+						type: 'POST',
+						data: {id:idFromSelect},
+						url : urlById,
+						dataType : 'json',
+							
+						success : function(json){
+							
+							console.log('workstamps loaded !');
+							
+							$("#e").show();
+							$("#pdf").show();
+							
+							if (grid) {
+								
+								grid.destroy();
+							}
+							
+							// Create the grid
+							grid = new FancyGrid({
+								
+								renderTo: 'tableau',
+								paging: true,
+								paging: {
+									pageSize: 50
+									
+								},
+								height:600,
+								data: json,
+								defaults: {
+									sortable: true,
+									filter: {
+										header: true,
+										emptyText: 'Rechercher'
+									}
+								},
+								columns: [{
+									index: 'categorie',
+									title: 'Catégorie',
+									type: 'string',
+									flex: 1
+								},{
+									index: 'noRapport',      
+									title: 'No Rapport',
+									type: 'number',
+									flex: 1
+								},{
+									index: 'dateRapport',
+									title: 'Date',
+									type: 'string',
+									flex: 1
+								},{
+									index: 'collabRapport',
+									title: 'Collaborateur',
+									type: 'string',
+									flex: 1
+								},{
+									index: 'ecritureRapport',
+									title: 'Ecriture',
+									type: 'string',
+									flex: 1
+								},{
+									index: 'heuresRapport',
+									title: 'Heures',
+									type: 'number',
+									flex: 1
+								},{
+									index: 'montantRapport',
+									title: 'Montant',
+									type: 'number',
+									flex: 1
+								}]
+							});							
+						}
+					});						
+				});				
+			});
+		
+	</script>
+	</body>
+</html>
